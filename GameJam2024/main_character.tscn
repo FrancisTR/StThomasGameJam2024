@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciy24ogunkqu8"]
+
+[ext_resource type="Texture2D" uid="uid://do84v77owgo2f" path="res://Assets/PlayerPLACEHOLDER.png" id="1_d04qm"]
+[ext_resource type="Script" path="res://main_character.gd" id="1_lsy0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swsyt"]
+size = Vector2(36, 34)
+
+[node name="MainCharacter" type="CharacterBody2D"]
+script = ExtResource("1_lsy0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.22414, 1.15517)
+texture = ExtResource("1_d04qm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_swsyt")
