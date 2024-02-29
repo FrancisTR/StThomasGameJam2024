@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://cos1lkxoaci7v"]
+
+[ext_resource type="PackedScene" uid="uid://ciy24ogunkqu8" path="res://BuildingBlocks/main_character.tscn" id="1_3f8wd"]
+[ext_resource type="Script" path="res://Levels/Level1/level_1.gd" id="1_esnl2"]
+[ext_resource type="PackedScene" uid="uid://cc06yvvvk4q8s" path="res://BuildingBlocks/light_source.tscn" id="2_u3q5j"]
+[ext_resource type="PackedScene" uid="uid://tbhip4tsjube" path="res://BuildingBlocks/SwitchButton.tscn" id="4_i0stt"]
+[ext_resource type="PackedScene" uid="uid://b1hrg2vx7gda6" path="res://BuildingBlocks/wall.tscn" id="6_44ejy"]
+[ext_resource type="PackedScene" uid="uid://cdgmpc876ovv8" path="res://BuildingBlocks/reflect_mirror_v_2.tscn" id="7_1th2g"]
+[ext_resource type="PackedScene" uid="uid://e27eu4dulh55" path="res://Levels/Level2/level_2.tscn" id="7_k2nau"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_esnl2")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1426.0
+offset_bottom = 809.0
+color = Color(0, 0, 0, 1)
+
+[node name="LightSource" parent="." instance=ExtResource("2_u3q5j")]
+position = Vector2(585, 628)
+target_level = ExtResource("7_k2nau")
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_3f8wd")]
+position = Vector2(700, 576)
+
+[node name="Switches" type="Node" parent="."]
+
+[node name="SwitchButton" parent="Switches" instance=ExtResource("4_i0stt")]
+position = Vector2(753, 194)
+
+[node name="SwitchButton2" parent="Switches" instance=ExtResource("4_i0stt")]
+position = Vector2(416, 196)
+
+[node name="ReflectMirrorV2" parent="." instance=ExtResource("7_1th2g")]
+position = Vector2(597, 109)
+rotation = 0.486947
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall2" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(16, 273)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(184, 273)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(352, 273)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(688, 273)
+
+[node name="Wall6" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(856, 273)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(1024, 273)
+
+[node name="Wall" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(17, 50)
+rotation = 1.5708
+scale = Vector2(4.9757, -1.10185)
+
+[node name="Wall8" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(1119, 37)
+rotation = 1.5708
+scale = Vector2(4.9757, -1.10185)
+
+[node name="Wall9" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(121, 681)
+scale = Vector2(6.8157, -1.10185)
+
+[node name="Wall10" parent="Walls" instance=ExtResource("6_44ejy")]
+position = Vector2(109, 34)
+scale = Vector2(6.8157, -1.10185)

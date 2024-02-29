@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://tbhip4tsjube"]
+
+[ext_resource type="Script" path="res://Scripts/SwitchButton.gd" id="1_jtmsp"]
+[ext_resource type="Texture2D" uid="uid://dno66gl0cyt0n" path="res://Assets/platePLACEHOLDER.png" id="2_hgxhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkoaa"]
+size = Vector2(60, 58)
+
+[node name="SwitchButton" type="StaticBody2D"]
+script = ExtResource("1_jtmsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.05172, 1.98276)
+texture = ExtResource("2_hgxhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vkoaa")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

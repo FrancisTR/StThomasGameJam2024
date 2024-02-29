@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://coacoqu4foqkc"]
+
+[ext_resource type="Script" path="res://Scripts/ReflectMirror.gd" id="1_k4evk"]
+[ext_resource type="Texture2D" uid="uid://do84v77owgo2f" path="res://Assets/PlayerPLACEHOLDER.png" id="2_pnhfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uptl8"]
+size = Vector2(132, 120)
+
+[node name="ReflectMirror" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_k4evk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4.5, 4.143)
+texture = ExtResource("2_pnhfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_uptl8")
+one_way_collision_margin = 128.0

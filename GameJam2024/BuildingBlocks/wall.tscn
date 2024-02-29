@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1hrg2vx7gda6"]
+
+[ext_resource type="Texture2D" uid="uid://do84v77owgo2f" path="res://Assets/PlayerPLACEHOLDER.png" id="1_ikhox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjd54"]
+size = Vector2(168, 45)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(68.75, 7.75)
+scale = Vector2(5.74138, 1.53448)
+texture = ExtResource("1_ikhox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(69, 7.5)
+shape = SubResource("RectangleShape2D_yjd54")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://co0phtnnmbkgx"]
+
+[ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_bx23a"]
+
+[node name="Laser" type="Node2D"]
+script = ExtResource("1_bx23a")
+
+[node name="Laser" type="RayCast2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_filter = 1
+default_color = Color(1, 1, 0.290196, 0.407843)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="End" type="GPUParticles2D" parent="."]

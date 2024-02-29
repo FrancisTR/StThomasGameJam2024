@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdgmpc876ovv8"]
+
+[ext_resource type="Texture2D" uid="uid://dno66gl0cyt0n" path="res://Assets/platePLACEHOLDER.png" id="1_vyb6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yqmv"]
+size = Vector2(112, 30)
+
+[node name="ReflectMirrorV2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.84483, 1)
+texture = ExtResource("1_vyb6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0yqmv")
